@@ -1,5 +1,5 @@
-class Assets {
-  Assets._();
+class AppImages {
+  AppImages._();
   
   /// Assets for imagesAvatar1
   /// assets/images/avatar1.svg
@@ -33,6 +33,10 @@ class Assets {
   /// assets/images/lekan.svg
   static const String imagesLekan = "assets/images/lekan.svg";
 
+  /// Assets for imagesLogout
+  /// assets/images/logout.svg
+  static const String imagesLogout = "assets/images/logout.svg";
+
   /// Assets for imagesMyInvestments2
   /// assets/images/My-Investments-2.svg
   static const String imagesMyInvestments2 = "assets/images/My-Investments-2.svg";
@@ -40,6 +44,10 @@ class Assets {
   /// Assets for imagesMyTransaction
   /// assets/images/my_transaction.svg
   static const String imagesMyTransaction = "assets/images/my_transaction.svg";
+
+  /// Assets for imagesSetting2
+  /// assets/images/setting-2.svg
+  static const String imagesSetting2 = "assets/images/setting-2.svg";
 
   /// Assets for imagesStatistics
   /// assets/images/Statistics.svg
