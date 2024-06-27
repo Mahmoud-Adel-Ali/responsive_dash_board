@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_body.dart';
 
 import 'all_expenses_header.dart';
 
@@ -15,6 +16,7 @@ class AllExpenses extends StatelessWidget {
         children: [
           AllExpensesHeader(),
           SizedBox(height: 22),
+          AllExpensesBody(),
         ],
       ),
     );
