@@ -6,26 +6,32 @@ class AllExpensesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
+        const Text(
           'All Expenses',
           style: AppStyless.styleSemiBold20,
         ),
-        SizedBox(width: 10),
-        Row(
-          children: [
-            Text(
-              'Monthly',
-              style: AppStyless.styleMedium16,
-            ),
-            Icon(
-              Icons.keyboard_arrow_down,
-              color: Color(0xff064061),
-              size: 35,
-            ),
-          ],
+        const SizedBox(width: 10),
+        Container(
+          padding: const EdgeInsets.all(12),
+          decoration: const BoxDecoration(
+            color: Color(0xffF1F1F1),
+          ),
+          child: const Row(
+            children: [
+              Text(
+                'Monthly',
+                style: AppStyless.styleMedium16,
+              ),
+              Icon(
+                Icons.keyboard_arrow_down,
+                color: Color(0xff064061),
+                size: 35,
+              ),
+            ],
+          ),
         ),
       ],
     );
