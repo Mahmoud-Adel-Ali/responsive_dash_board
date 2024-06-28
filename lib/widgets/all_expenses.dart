@@ -12,10 +12,10 @@ class AllExpenses extends StatelessWidget {
       padding: const EdgeInsets.all(22),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(18)),
-      child: const Column(
+      child: Column(
         children: [
-          AllExpensesHeader(),
-          SizedBox(height: 22),
+          const AllExpensesHeader(),
+          const SizedBox(height: 22),
           AllExpensesBody(),
         ],
       ),

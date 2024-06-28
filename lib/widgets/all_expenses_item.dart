@@ -8,49 +8,51 @@ class AllExpensesItem extends StatelessWidget {
   final AllExpensesItemModel item;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 150,
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: ShapeDecoration(
-        shape: RoundedRectangleBorder(
-            side: const BorderSide(width: 1, color: Color(0xffF1F1F1)),
-            borderRadius: BorderRadius.circular(16)),
-        color: Colors.white,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CircleAvatar(
-                backgroundColor: const Color(0xffFAFAFA),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SvgPicture.asset(item.img),
+    return Expanded(
+      child: Container(
+        width: 150,
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        decoration: ShapeDecoration(
+          shape: RoundedRectangleBorder(
+              side: const BorderSide(width: 1, color: Color(0xffF1F1F1)),
+              borderRadius: BorderRadius.circular(16)),
+          color: Colors.white,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  backgroundColor: const Color(0xffFAFAFA),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SvgPicture.asset(item.img),
+                  ),
                 ),
-              ),
-              const Icon(
-                Icons.keyboard_arrow_right_outlined,
-                color: Color(0xff064061),
-              )
-            ],
-          ),
-          const SizedBox(height: 34),
-          Text(
-            item.title,
-            style: AppStyless.styleSemiBold16,
-          ),
-          Text(
-            item.date,
-            style: AppStyless.styleReguler14,
-          ),
-          const SizedBox(height: 10),
-          Text(
-            '\$${item.price.toString()}',
-            style: AppStyless.styleSemiBold24,
-          ),
-        ],
+                const Icon(
+                  Icons.keyboard_arrow_right_outlined,
+                  color: Color(0xff064061),
+                )
+              ],
+            ),
+            const SizedBox(height: 34),
+            Text(
+              item.title,
+              style: AppStyless.styleSemiBold16,
+            ),
+            Text(
+              item.date,
+              style: AppStyless.styleReguler14,
+            ),
+            const SizedBox(height: 10),
+            Text(
+              '\$${item.price.toString()}',
+              style: AppStyless.styleSemiBold24,
+            ),
+          ],
+        ),
       ),
     );
   }
