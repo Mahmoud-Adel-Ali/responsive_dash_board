@@ -5,9 +5,15 @@ import 'package:responsive_dash_board/model/all_expenses_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_item.dart';
 
-class AllExpensesBody extends StatelessWidget {
-  AllExpensesBody({super.key});
+class AllExpensesBody extends StatefulWidget {
+  const AllExpensesBody({super.key});
 
+  @override
+  State<AllExpensesBody> createState() => _AllExpensesBodyState();
+}
+
+class _AllExpensesBodyState extends State<AllExpensesBody> {
+  int selectdIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -18,9 +24,19 @@ class AllExpensesBody extends StatelessWidget {
           var item = e.value;
           return Expanded(
             flex: 1,
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpensesItem(item: item, isSelected: true,),
+            child: InkWell(
+              onTap: () {
+                setState(() {
+                  selectdIndex = index;
+                });
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+                child: AllExpensesItem(
+                  item: item,
+                  isSelected: selectdIndex == index,
+                ),
+              ),
             ),
           );
         },
@@ -28,7 +44,7 @@ class AllExpensesBody extends StatelessWidget {
     );
   }
 
-  List<AllExpensesItemModel> items = [
+  final List<AllExpensesItemModel> items = [
     AllExpensesItemModel(
       img: AppImages.imagesBalance,
       title: 'Balance',
