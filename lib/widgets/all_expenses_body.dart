@@ -20,7 +20,7 @@ class AllExpensesBody extends StatelessWidget {
             flex: 1,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpensesItem(item: item),
+              child: AllExpensesItem(item: item, isSelected: true,),
             ),
           );
         },
