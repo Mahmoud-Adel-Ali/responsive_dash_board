@@ -12,14 +12,15 @@ class DesktoopLayout extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(child: CustomDrawer()),
-        SizedBox(width: 20),
         Expanded(
+          flex: 2,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                AllExpenses(),
+                SizedBox(width: 20),
+                Expanded(child: AllExpenses()),
                 SizedBox(height: 20),
-                QuickInvoice(),
+                Expanded(child: QuickInvoice()),
               ],
             ),
           ),
