@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
-import 'package:responsive_dash_board/widgets/custom_user_text_field.dart';
 import 'package:responsive_dash_board/widgets/latest_transaction.dart';
 import 'package:responsive_dash_board/widgets/quick_voice_header.dart';
+import 'package:responsive_dash_board/widgets/title_text_field.dart';
 
 
 class QuickInvoice extends StatelessWidget {
@@ -17,7 +17,7 @@ class QuickInvoice extends StatelessWidget {
           const SizedBox(height: 20),
           LatestTransaction(),
           const Divider(height: 48),
-          const CustomUserTextField(hinttext: 'hinttext'),
+          const TitleTextField(title: 'Customer name', hinttext: 'Type customer name'),
 
         ],
       ),
