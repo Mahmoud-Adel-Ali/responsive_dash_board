@@ -28,7 +28,7 @@ class CustomButton extends StatelessWidget {
         text,
         style: AppStyless.styleSemiBold16.copyWith(
             color: background != null
-                ? const Color(0xff4EB7F2)
+                ? const Color(0xffFFFFFF)
                 : const Color(0xff4EB7F2)),
       ),
     );
