@@ -27,9 +27,34 @@ class MyCard extends StatelessWidget {
                 image: AssetImage(AppImages.imagesCardBG),
               ),
             ),
-            child: const Column(
+            child: Column(
               children: [
-                CustomCardHeader(),
+                const CustomCardHeader(),
+                const Expanded(child: SizedBox()),
+                Container(
+                  width: double.infinity,
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.only(right: 24),
+                  child: Text(
+                    '0918 8124 0042 8129',
+                    style: AppStyless.styleSemiBold24.copyWith(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  width: double.infinity,
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.only(right: 24),
+                  child: Text(
+                    '12/20-124',
+                    style: AppStyless.styleReguler16.copyWith(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
               ],
             ),
           ),
@@ -38,4 +63,3 @@ class MyCard extends StatelessWidget {
     );
   }
 }
-
