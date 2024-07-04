@@ -19,7 +19,7 @@ class AppImages {
 
   /// Assets for imagesCardBG
   /// assets/images/card-BG.svg
-  static const String imagesCardBG = "assets/images/card-BG.svg";
+  static const String imagesCardBG = "assets/images/card.png";
 
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg
