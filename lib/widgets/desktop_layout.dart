@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
-import 'package:responsive_dash_board/widgets/my_card_page_view.dart';
+import 'package:responsive_dash_board/widgets/my_card_section.dart';
 
 import 'all_expenses_and_quick_invoice_section.dart';
 
@@ -20,7 +20,7 @@ class DesktoopLayout extends StatelessWidget {
           flex: 2,
           child: Column(
             children: [
-              MyCardPageView(),
+              MyCardSection(),
             ],
           ),
         )
