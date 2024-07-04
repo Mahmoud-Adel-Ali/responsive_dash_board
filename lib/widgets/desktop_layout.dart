@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/custom_dot_indecator.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/widgets/my_card_page_view.dart';
 
@@ -21,6 +22,13 @@ class DesktoopLayout extends StatelessWidget {
           child: Column(
             children: [
               MyCardPageView(),
+              Row(
+                children: [
+                  CustomDotIndecator(isActive: true),
+                  CustomDotIndecator(isActive: false),
+                  CustomDotIndecator(isActive: false),
+                ],
+              )
             ],
           ),
         )
