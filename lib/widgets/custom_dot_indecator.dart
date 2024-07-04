@@ -6,6 +6,7 @@ class CustomDotIndecator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
+      padding: EdgeInsets.only(right: 5),
       duration: const Duration(milliseconds: 300),
       width: isActive ? 32.0 : 8.0,
       height: 8.0,
