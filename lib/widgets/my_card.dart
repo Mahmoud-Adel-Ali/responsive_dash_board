@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/utils/app_styless.dart';
+import 'package:responsive_dash_board/widgets/custom_card_header.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -20,13 +21,21 @@ class MyCard extends StatelessWidget {
           aspectRatio: 420 / 215,
           child: Container(
             decoration: const BoxDecoration(
-                color: Color(0xff4EB7F2),
-                borderRadius: BorderRadius.all(Radius.circular(12)),
-                image:
-                    DecorationImage(image: AssetImage(AppImages.imagesCardBG))),
+              color: Color(0xff4EB7F2),
+              borderRadius: BorderRadius.all(Radius.circular(12)),
+              image: DecorationImage(
+                image: AssetImage(AppImages.imagesCardBG),
+              ),
+            ),
+            child: const Column(
+              children: [
+                CustomCardHeader(),
+              ],
+            ),
           ),
         ),
       ],
     );
   }
 }
+

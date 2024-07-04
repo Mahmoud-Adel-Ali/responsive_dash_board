@@ -2,7 +2,7 @@ class AppImages {
   AppImages._();
   
   /// Assets for imagesAvatar1
-  /// assets/images/avatar1.svg
+  /// assets/images/avatar1.svgF
   static const String imagesAvatar1 = "assets/images/avatar1.svg";
 
   /// Assets for imagesAvatar2
@@ -17,9 +17,13 @@ class AppImages {
   /// assets/images/Balance.svg
   static const String imagesBalance = "assets/images/Balance.svg";
 
+  /// Assets for imagesCard
+  /// assets/images/card.png
+  static const String imagesCard = "assets/images/card.png";
+
   /// Assets for imagesCardBG
   /// assets/images/card-BG.svg
-  static const String imagesCardBG = "assets/images/card.png";
+  static const String imagesCardBG = "assets/images/card-BG.svg";
 
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg
@@ -28,6 +32,10 @@ class AppImages {
   /// Assets for imagesExpenses
   /// assets/images/Expenses.svg
   static const String imagesExpenses = "assets/images/Expenses.svg";
+
+  /// Assets for imagesGallery
+  /// assets/images/gallery.svg
+  static const String imagesGallery = "assets/images/gallery.svg";
 
   /// Assets for imagesIncome
   /// assets/images/Income.svg

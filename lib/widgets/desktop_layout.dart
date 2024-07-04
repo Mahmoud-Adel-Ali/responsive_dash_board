@@ -16,7 +16,7 @@ class DesktoopLayout extends StatelessWidget {
         Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
         Expanded(flex: 3, child: AllExpensesAndQuickInvioceSection()),
-        SizedBox(width: 32),
+        SizedBox(width: 24),
         Expanded(
           flex: 2,
           child: CustomBackgroundContainer(
