@@ -21,7 +21,10 @@ class _TransactionHistoryListViewState
         physics: const NeverScrollableScrollPhysics(),
         itemCount: items.length,
         itemBuilder: (context, index) {
-          return TransactionHistoryItem(item: items[index]);
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: TransactionHistoryItem(item: items[index]),
+          );
         });
   }
 

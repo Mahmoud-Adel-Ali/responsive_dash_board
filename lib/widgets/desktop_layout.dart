@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
-import 'package:responsive_dash_board/widgets/my_card_section.dart';
-import 'package:responsive_dash_board/widgets/transaction_history.dart';
+import 'package:responsive_dash_board/widgets/my_card_and_transaction_history.dart';
 
 import 'all_expenses_and_quick_invoice_section.dart';
 
@@ -19,12 +18,13 @@ class DesktoopLayout extends StatelessWidget {
         SizedBox(width: 24),
         Expanded(
           flex: 2,
-          child: Column(
-            children: [
-              MyCardSection(),
-              SizedBox(height: 20),
-              TransactionHistory(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                MyCardAndTransactionHistory(),
+                SizedBox(height: 20),
+              ],
+            ),
           ),
         )
       ],
