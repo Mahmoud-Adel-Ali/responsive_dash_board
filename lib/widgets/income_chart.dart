@@ -12,7 +12,7 @@ class _IncomeChartState extends State<IncomeChart> {
   int currentIndex = -1;
   @override
   Widget build(BuildContext context) {
-    return PieChart(PieChartData(
+    var pieChartData = PieChartData(
       sectionsSpace: 0,
       pieTouchData: PieTouchData(
         touchCallback: (p0, p1) {
@@ -46,6 +46,7 @@ class _IncomeChartState extends State<IncomeChart> {
           showTitle: false,
         ),
       ],
-    ));
+    );
+    return PieChart(pieChartData);
   }
 }
