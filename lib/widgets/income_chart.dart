@@ -9,41 +9,43 @@ class IncomeChart extends StatefulWidget {
 }
 
 class _IncomeChartState extends State<IncomeChart> {
+  int currentIndex = -1;
   @override
   Widget build(BuildContext context) {
-    return PieChart(
-      data,
-      
-    );
+    return PieChart(PieChartData(
+      sectionsSpace: 0,
+      pieTouchData: PieTouchData(
+        touchCallback: (p0, p1) {
+          currentIndex = p1!.touchedSection!.touchedSectionIndex;
+          setState(() {});
+        },
+      ),
+      sections: [
+        PieChartSectionData(
+          color: const Color(0xff208CC8),
+          value: 40,
+          radius: currentIndex == 0 ? 65 : 50,
+          showTitle: false,
+        ),
+        PieChartSectionData(
+          color: const Color(0xff4EB7F2),
+          value: 25,
+          radius: currentIndex == 1 ? 65 : 50,
+          showTitle: false,
+        ),
+        PieChartSectionData(
+          color: const Color(0xff064061),
+          value: 20,
+          radius: currentIndex == 2 ? 65 : 50,
+          showTitle: false,
+        ),
+        PieChartSectionData(
+          color: const Color(0xffE2DECD),
+          value: 22,
+          radius: currentIndex == 3 ? 65 : 50,
+          showTitle: false,
+        ),
+      ],
+    ));
   }
-
-  PieChartData data = PieChartData(
-    sectionsSpace: 0,
-    sections: [
-      PieChartSectionData(
-        color: const Color(0xff208CC8),
-        value: 40,
-        radius: 50,
-        showTitle: false,
-      ),
-      PieChartSectionData(
-        color: const Color(0xff4EB7F2),
-        value: 25,
-        radius: 50,
-        showTitle: false,
-      ),
-      PieChartSectionData(
-        color: const Color(0xff064061),
-        value: 20,
-        radius: 50,
-        showTitle: false,
-      ),
-      PieChartSectionData(
-        color: const Color(0xffE2DECD),
-        value: 22,
-        radius: 50,
-        showTitle: false,
-      ),
-    ],
-  );
 }
