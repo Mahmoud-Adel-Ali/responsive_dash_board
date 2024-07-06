@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/widgets/income_section.dart';
-import 'package:responsive_dash_board/widgets/my_card_and_transaction_history.dart';
 
 import 'all_expenses_and_quick_invoice_section.dart';
 
