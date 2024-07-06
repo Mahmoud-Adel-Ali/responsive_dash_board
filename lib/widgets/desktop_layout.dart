@@ -19,14 +19,12 @@ class DesktoopLayout extends StatelessWidget {
         SizedBox(width: 24),
         Expanded(
           flex: 2,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                MyCardAndTransactionHistory(),
-                SizedBox(height: 20),
-                IncomeSection(),
-              ],
-            ),
+          child: Column(
+            children: [
+              // MyCardAndTransactionHistory(),
+              SizedBox(height: 20),
+              IncomeSection(),
+            ],
           ),
         )
       ],
