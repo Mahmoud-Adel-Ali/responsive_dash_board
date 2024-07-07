@@ -16,7 +16,7 @@ class _IncomeChartState extends State<IncomeChart> {
       sectionsSpace: 0,
       pieTouchData: PieTouchData(
         touchCallback: (p0, p1) {
-          currentIndex = p1!.touchedSection!.touchedSectionIndex;
+          currentIndex = p1?.touchedSection?.touchedSectionIndex ?? -1;
           setState(() {});
         },
       ),
@@ -47,6 +47,6 @@ class _IncomeChartState extends State<IncomeChart> {
         ),
       ],
     );
-    return PieChart(pieChartData);
+    return AspectRatio(aspectRatio: 1,  child: PieChart(pieChartData));
   }
 }
