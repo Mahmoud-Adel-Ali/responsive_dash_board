@@ -10,8 +10,6 @@ class IncomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      // mainAxisAlignment: MainAxisAlignment.center,
-      // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(flex: 3, child: IncomeChart()),
         // SizedBox(width: 10),
