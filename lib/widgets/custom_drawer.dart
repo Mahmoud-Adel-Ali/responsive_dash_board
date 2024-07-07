@@ -11,45 +11,50 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: Container(
-            color: Colors.white,
-            child: UserInfoListTile(
-              item: UserInfoModel(
-                img: AppImages.imagesAvatar1,
-                title: 'Lekan Okeowo',
-                subtitle: 'demo@gmail.com',
+    return Container(
+      width: MediaQuery.sizeOf(context).width * 0.75,
+      color: Colors.white,
+
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Container(
+              color: Colors.white,
+              child: UserInfoListTile(
+                item: UserInfoModel(
+                  img: AppImages.imagesAvatar1,
+                  title: 'Lekan Okeowo',
+                  subtitle: 'demo@gmail.com',
+                ),
               ),
             ),
           ),
-        ),
-        const DrawerItemsListView(),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            children: [
-              const Expanded(child: SizedBox()),
-              DrawerItem(
-                drawerItemModel: DrawerItemModel(
-                  title: 'Setting system',
-                  img: AppImages.imagesSetting2,
+          const DrawerItemsListView(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                const Expanded(child: SizedBox()),
+                DrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    title: 'Setting system',
+                    img: AppImages.imagesSetting2,
+                  ),
+                  isActive: false,
                 ),
-                isActive: false,
-              ),
-              DrawerItem(
-                isActive: false,
-                drawerItemModel: DrawerItemModel(
-                  title: 'Logout account',
-                  img: AppImages.imagesLogout,
+                DrawerItem(
+                  isActive: false,
+                  drawerItemModel: DrawerItemModel(
+                    title: 'Logout account',
+                    img: AppImages.imagesLogout,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 8),
-            ],
+                const SizedBox(height: 8),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

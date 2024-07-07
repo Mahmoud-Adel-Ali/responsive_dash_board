@@ -15,7 +15,7 @@ class MyCard extends StatelessWidget {
           color: Color(0xff4EB7F2),
           borderRadius: BorderRadius.all(Radius.circular(12)),
           image: DecorationImage(
-            image: AssetImage(AppImages.imagesCardBG),
+            image: AssetImage(AppImages.imagesCard),
           ),
         ),
         child: Column(
