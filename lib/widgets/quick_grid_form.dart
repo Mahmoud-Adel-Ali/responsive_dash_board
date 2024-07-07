@@ -20,7 +20,7 @@ class QuickInvoiceForm extends StatelessWidget {
                     title: 'Customer Email', hinttext: 'Type customer email')),
           ],
         ),
-        SizedBox(height: 25),
+        SizedBox(height: 10),
         Row(
           children: [
             Expanded(
