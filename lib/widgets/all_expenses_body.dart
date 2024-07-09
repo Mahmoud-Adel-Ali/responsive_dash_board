@@ -23,7 +23,6 @@ class _AllExpensesBodyState extends State<AllExpensesBody> {
           int index = e.key;
           var item = e.value;
           return Expanded(
-            flex: 1,
             child: InkWell(
               onTap: () {
                 setState(() {

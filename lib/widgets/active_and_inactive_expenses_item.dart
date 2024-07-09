@@ -14,7 +14,6 @@ class InActiveExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
@@ -57,7 +56,6 @@ class ActiveExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
