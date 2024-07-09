@@ -14,7 +14,7 @@ class CustomUserTextField extends StatelessWidget {
         fillColor: const Color(0xffFAFAFA),
         filled: true,
         hintText: hinttext,
-        hintStyle: AppStyless.styleReguler16,
+        hintStyle: AppStyless.styleReguler16(context),
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(),

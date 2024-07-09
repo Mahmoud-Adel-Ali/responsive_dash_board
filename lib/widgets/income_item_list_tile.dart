@@ -18,7 +18,7 @@ class IncomeItemListTile extends StatelessWidget {
       // contentPadding: EdgeInsets.zero,
       title: Text(
         'Design service',
-        style: AppStyless.styleReguler16.copyWith(
+        style: AppStyless.styleReguler16(context).copyWith(
           color: const Color(0xff064061),
         ),
       ),
@@ -29,7 +29,7 @@ class IncomeItemListTile extends StatelessWidget {
       ),
       trailing: Text(
         '$value%',
-        style: AppStyless.styleMedium16.copyWith(
+        style: AppStyless.styleMedium16(context).copyWith(
           color: const Color(0xff208CC8),
         ),
       ),

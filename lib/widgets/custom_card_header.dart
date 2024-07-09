@@ -16,11 +16,11 @@ class CustomCardHeader extends StatelessWidget {
       title: Text(
         'Name card',
         style:
-            AppStyless.styleReguler16.copyWith(color: Colors.white),
+            AppStyless.styleReguler16(context).copyWith(color: Colors.white),
       ),
       subtitle:  Text(
         'Syah Bandi',
-        style: AppStyless.styleMedium20,
+        style: AppStyless.styleMedium20(context),
       ),
       trailing: (SvgPicture.asset(AppImages.imagesGallery)),
     );

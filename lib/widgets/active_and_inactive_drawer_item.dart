@@ -16,7 +16,7 @@ class InActiveDrawerItem extends StatelessWidget {
     return ListTile(
       title: Text(
         drawerItemModel.title,
-        style: AppStyless.styleMedium16,
+        style: AppStyless.styleMedium16(context),
       ),
       leading: SvgPicture.asset(drawerItemModel.img),
     );
@@ -36,7 +36,7 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       title: Text(
         drawerItemModel.title,
-        style: AppStyless.styleBold16,
+        style: AppStyless.styleBold16(context),
       ),
       leading: SvgPicture.asset(drawerItemModel.img),
     );

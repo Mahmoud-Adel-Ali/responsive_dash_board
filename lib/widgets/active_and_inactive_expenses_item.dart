@@ -29,16 +29,16 @@ class InActiveExpensesItem extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             item.title,
-            style: AppStyless.styleSemiBold16,
+            style: AppStyless.styleSemiBold16(context),
           ),
           Text(
             item.date,
-            style: AppStyless.styleReguler14,
+            style: AppStyless.styleReguler14(context),
           ),
           const SizedBox(height: 10),
           Text(
             '\$${item.price.toString()}',
-            style: AppStyless.styleSemiBold24,
+            style: AppStyless.styleSemiBold24(context),
           ),
         ],
       ),
@@ -76,18 +76,18 @@ class ActiveExpensesItem extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             item.title,
-            style: AppStyless.styleSemiBold16
+            style: AppStyless.styleSemiBold16(context)
                 .copyWith(color: const Color(0xffffffff)),
           ),
           Text(
             item.date,
-            style: AppStyless.styleReguler14
+            style: AppStyless.styleReguler14(context)
                 .copyWith(color: const Color(0xfffafafa)),
           ),
           const SizedBox(height: 10),
           Text(
             '\$${item.price.toString()}',
-            style: AppStyless.styleSemiBold24
+            style: AppStyless.styleSemiBold24(context)
                 .copyWith(color: const Color(0xffffffff)),
           ),
         ],

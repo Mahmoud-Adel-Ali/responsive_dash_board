@@ -28,7 +28,7 @@ class MyCard extends StatelessWidget {
               padding: const EdgeInsets.only(right: 24),
               child: Text(
                 '0918 8124 0042 8129',
-                style: AppStyless.styleSemiBold24.copyWith(
+                style: AppStyless.styleSemiBold24(context).copyWith(
                   color: Colors.white,
                 ),
               ),
@@ -40,7 +40,7 @@ class MyCard extends StatelessWidget {
               padding: const EdgeInsets.only(right: 24),
               child: Text(
                 '12/20-124',
-                style: AppStyless.styleReguler16.copyWith(
+                style: AppStyless.styleReguler16(context).copyWith(
                   color: Colors.white,
                 ),
               ),

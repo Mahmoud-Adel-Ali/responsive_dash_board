@@ -11,7 +11,7 @@ class AllExpensesHeader extends StatelessWidget {
       children: [
          Text(
           'All Expenses',
-          style: AppStyless.styleSemiBold20,
+          style: AppStyless.styleSemiBold20(context),
         ),
         const SizedBox(width: 10),
         Container(
@@ -23,7 +23,7 @@ class AllExpensesHeader extends StatelessWidget {
             children: [
               Text(
                 'Monthly',
-                style: AppStyless.styleMedium16,
+                style: AppStyless.styleMedium16(context),
               ),
               const Icon(
                 Icons.keyboard_arrow_down,

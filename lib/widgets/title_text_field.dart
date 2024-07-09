@@ -14,7 +14,7 @@ class TitleTextField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyless.styleMedium16.copyWith(fontWeight: FontWeight.w600),
+          style: AppStyless.styleMedium16(context).copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 6),
         CustomUserTextField(hinttext: hinttext),

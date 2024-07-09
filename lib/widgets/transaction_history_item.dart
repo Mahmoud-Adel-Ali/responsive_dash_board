@@ -11,11 +11,11 @@ class TransactionHistoryItem extends StatelessWidget {
       color: const Color(0xffFAFAFA),
       shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
-        title: Text(item.title, style: AppStyless.styleSemiBold16),
-        subtitle: Text(item.date, style: AppStyless.styleMedium16),
+        title: Text(item.title, style: AppStyless.styleSemiBold16(context)),
+        subtitle: Text(item.date, style: AppStyless.styleMedium16(context)),
         trailing: Text(
           item.amount,
-          style: AppStyless.styleSemiBold20.copyWith(
+          style: AppStyless.styleSemiBold20(context).copyWith(
             color: item.isWithDrawal
                 ? const Color(0xffF3735E)
                 : const Color(0xff7DD97B),

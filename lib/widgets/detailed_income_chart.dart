@@ -25,7 +25,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           titlePositionPercentageOffset: currentIndex == 0 ? 1.5 : null,
           title: currentIndex == 0 ? 'Design service' : '40%',
-          titleStyle: AppStyless.styleSemiBold18
+          titleStyle: AppStyless.styleSemiBold18(context)
               .copyWith(color: currentIndex == 0 ? const Color(0xff208CC8) : null),
           color: const Color(0xff208CC8),
           value: 40,
@@ -35,7 +35,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           color: const Color(0xff4EB7F2),titlePositionPercentageOffset: currentIndex == 1 ? -1.5 : null,
           title: currentIndex == 1 ? 'Design product' : '25%',
-          titleStyle: AppStyless.styleSemiBold18
+          titleStyle: AppStyless.styleSemiBold18(context)
               .copyWith(color: currentIndex == 1 ? const Color(0xff208CC8) : null),
           value: 25,
           radius: currentIndex == 1 ? 45: 40,
@@ -43,7 +43,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           color: const Color(0xff064061),titlePositionPercentageOffset: currentIndex == 2 ? 1.5 : null,
           title: currentIndex == 2 ? 'Product royalti' : '20%',
-          titleStyle: AppStyless.styleSemiBold18
+          titleStyle: AppStyless.styleSemiBold18(context)
               .copyWith(color: currentIndex == 2 ? const Color(0xff208CC8) : null),
           value: 20,
           radius: currentIndex == 2 ? 45: 40,
@@ -51,7 +51,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           color: const Color(0xffE2DECD),titlePositionPercentageOffset: currentIndex == 3 ? -1.2 : null,
           title: currentIndex == 3 ? 'Other' : '22%',
-          titleStyle: AppStyless.styleSemiBold18
+          titleStyle: AppStyless.styleSemiBold18(context)
               .copyWith(color: currentIndex == 3 ? const Color(0xff208CC8) : null),
           value: 22,
           radius: currentIndex == 3 ? 45: 40,

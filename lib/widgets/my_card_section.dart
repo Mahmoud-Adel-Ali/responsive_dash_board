@@ -10,7 +10,7 @@ class MyCardSection extends StatelessWidget {
     return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('My Card', style: AppStyless.styleSemiBold20),
+        Text('My Card', style: AppStyless.styleSemiBold20(context)),
         const SizedBox(height: 16),
         const MyCardPageView(),
       ],
