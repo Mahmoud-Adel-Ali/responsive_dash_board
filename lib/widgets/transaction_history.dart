@@ -8,14 +8,14 @@ class TransactionHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        TransactionHistoryHeader(),
-        SizedBox(height: 15),
+        const TransactionHistoryHeader(),
+        const SizedBox(height: 15),
         Text('13 April 2022', style: AppStyless.styleMedium16),
-        SizedBox(height: 25),
-        TransactionHistoryListView(),
+        const SizedBox(height: 25),
+        const TransactionHistoryListView(),
       ],
     );
   }

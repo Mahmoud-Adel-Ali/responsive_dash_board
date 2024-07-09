@@ -1,63 +1,91 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 
 abstract class AppStyless {
-  static const TextStyle styleReguler16 = TextStyle(
+  static  TextStyle styleReguler16 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 16,
+    fontSize: getResponsiveFontsize(fontsize :16),
     fontWeight: FontWeight.w400,
-    color: Color(0xff064060),
+    color: const Color(0xff064060),
   );
-  static const TextStyle styleBold16 = TextStyle(
+  static  TextStyle styleBold16 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 16,
+    fontSize: getResponsiveFontsize(fontsize :16),
     fontWeight: FontWeight.w700,
-    color: Color(0xff4EB7F2),
+    color: const Color(0xff4EB7F2),
   );
-  static const TextStyle styleMedium16 = TextStyle(
+  static  TextStyle styleMedium16 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 16,
+    fontSize: getResponsiveFontsize(fontsize :16),
     fontWeight: FontWeight.w500,
-    color: Color(0xff064060),
+    color: const Color(0xff064060),
   );
-  static const TextStyle styleSemiBold16 = TextStyle(
+  static  TextStyle styleSemiBold16 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 16,
+    fontSize: getResponsiveFontsize(fontsize :16),
     fontWeight: FontWeight.w600,
-    color: Color(0xff064060),
+    color: const Color(0xff064060),
   );
-  static const TextStyle styleSemiBold20 = TextStyle(
+  static  TextStyle styleSemiBold20 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 20,
+    fontSize: getResponsiveFontsize(fontsize :20),
     fontWeight: FontWeight.w600,
-    color: Color(0xff064060),
+    color: const Color(0xff064060),
   );
-  static const TextStyle styleMedium20 = TextStyle(
+  static  TextStyle styleMedium20 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 20,
+    fontSize: getResponsiveFontsize(fontsize :20),
     fontWeight: FontWeight.w500,
-    color: Color(0xffFFFFFF),
+    color: const Color(0xffFFFFFF),
   );
-  static const TextStyle styleReguler12 = TextStyle(
+  static  TextStyle styleReguler12 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 12,
+    fontSize: getResponsiveFontsize(fontsize :12),
     fontWeight: FontWeight.w400,
-    color: Color(0xffAAAAAA),
+    color: const Color(0xffAAAAAA),
   );
-  static const TextStyle styleReguler14 = TextStyle(
+  static  TextStyle styleReguler14 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 14,
+    fontSize: getResponsiveFontsize(fontsize :14),
     fontWeight: FontWeight.w400,
-    color: Color(0xffAAAAAA),
+    color: const Color(0xffAAAAAA),
   );
-  static const TextStyle styleSemiBold24 = TextStyle(
+  static  TextStyle styleSemiBold24 = TextStyle(
     fontFamily: 'Montserrat',
-    fontSize: 24,
+    fontSize: getResponsiveFontsize(fontsize :24),
     fontWeight: FontWeight.w600,
-    color: Color(0xff4EB7F2),
-  );static const TextStyle styleSemiBold18 = TextStyle(
-    fontFamily: 'Montserrat',
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: Color(0xffFFFFFF),
+    color: const Color(0xff4EB7F2),
   );
+  static  TextStyle styleSemiBold18 = TextStyle(
+    fontFamily: 'Montserrat',
+    fontSize: getResponsiveFontsize(fontsize :18),
+    fontWeight: FontWeight.w600,
+    color: const Color(0xffFFFFFF),
+  );
+}
+
+double getResponsiveFontsize({required double fontsize}) {
+  double scaleFactor = getScaleFactor();
+
+  double responsiveFontSzie = scaleFactor * fontsize;
+  double lowerLimit = 0.85 * responsiveFontSzie;
+  double upperLimit = 1.25 * responsiveFontSzie;
+
+  return responsiveFontSzie.clamp(lowerLimit, upperLimit);
+}
+
+double getScaleFactor() {
+  // double width = MediaQuery.sizeOf(context).width;
+  var dispatchet = PlatformDispatcher.instance;
+  var physicalWidth = dispatchet.views.first.physicalSize.width;
+  var devicePixelRatio = dispatchet.views.first.devicePixelRatio;
+  final double width = physicalWidth / devicePixelRatio;
+  if (width <= SizeConfig.tablet) {
+    return width / 550;
+  } else if (width <= SizeConfig.desktop) {
+    return width / 1000;
+  } else {
+    return width / 1500;
+  }
 }

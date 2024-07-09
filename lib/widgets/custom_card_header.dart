@@ -18,7 +18,7 @@ class CustomCardHeader extends StatelessWidget {
         style:
             AppStyless.styleReguler16.copyWith(color: Colors.white),
       ),
-      subtitle: const Text(
+      subtitle:  Text(
         'Syah Bandi',
         style: AppStyless.styleMedium20,
       ),

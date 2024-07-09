@@ -11,7 +11,7 @@ class LatestTransaction extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
+         SizedBox(
           width: double.infinity,
           child: Text(
             'Latest Transaction',

@@ -7,12 +7,12 @@ class MyCardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('My Card', style: AppStyless.styleSemiBold20),
-        SizedBox(height: 16),
-        MyCardPageView(),
+        const SizedBox(height: 16),
+        const MyCardPageView(),
       ],
     );
   }
