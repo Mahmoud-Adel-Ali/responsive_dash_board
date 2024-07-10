@@ -26,18 +26,27 @@ class InActiveExpensesItem extends StatelessWidget {
         children: [
           AllExpensesItemHeader(item: item),
           const SizedBox(height: 34),
-          Text(
-            item.title,
-            style: AppStyless.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              item.title,
+              style: AppStyless.styleSemiBold16(context),
+            ),
           ),
-          Text(
-            item.date,
-            style: AppStyless.styleReguler14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              item.date,
+              style: AppStyless.styleReguler14(context),
+            ),
           ),
           const SizedBox(height: 10),
-          Text(
-            '\$${item.price.toString()}',
-            style: AppStyless.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              '\$${item.price.toString()}',
+              style: AppStyless.styleSemiBold24(context),
+            ),
           ),
         ],
       ),
@@ -72,21 +81,30 @@ class ActiveExpensesItem extends StatelessWidget {
             imageColor: const Color(0xffFFFFFF),
           ),
           const SizedBox(height: 34),
-          Text(
-            item.title,
-            style: AppStyless.styleSemiBold16(context)
-                .copyWith(color: const Color(0xffffffff)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              item.title,
+              style: AppStyless.styleSemiBold16(context)
+                  .copyWith(color: const Color(0xffffffff)),
+            ),
           ),
-          Text(
-            item.date,
-            style: AppStyless.styleReguler14(context)
-                .copyWith(color: const Color(0xfffafafa)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              item.date,
+              style: AppStyless.styleReguler14(context)
+                  .copyWith(color: const Color(0xfffafafa)),
+            ),
           ),
           const SizedBox(height: 10),
-          Text(
-            '\$${item.price.toString()}',
-            style: AppStyless.styleSemiBold24(context)
-                .copyWith(color: const Color(0xffffffff)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              '\$${item.price.toString()}',
+              style: AppStyless.styleSemiBold24(context)
+                  .copyWith(color: const Color(0xffffffff)),
+            ),
           ),
         ],
       ),

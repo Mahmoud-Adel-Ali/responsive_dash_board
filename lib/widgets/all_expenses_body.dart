@@ -17,6 +17,51 @@ class _AllExpensesBodyState extends State<AllExpensesBody> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      children: [
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              setState(() {
+                selectdIndex = 0;
+              });
+            },
+            child: AllExpensesItem(
+              item: items[0],
+              isSelected: selectdIndex == 0,
+            ),
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              setState(() {
+                selectdIndex = 1;
+              });
+            },
+            child: AllExpensesItem(
+              item: items[1],
+              isSelected: selectdIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(width: 10),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              setState(() {
+                selectdIndex = 2;
+              });
+            },
+            child: AllExpensesItem(
+              item: items[2],
+              isSelected: selectdIndex == 2,
+            ),
+          ),
+        ),
+      ],
+    );
+    return Row(
       // children: items.map((e) =>Expanded( flex: 1, child: AllExpensesItem(item: e)) ,).toList(),
       children: items.asMap().entries.map(
         (e) {
